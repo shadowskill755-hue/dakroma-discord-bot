@@ -1,4 +1,5 @@
-require('dotenv').config();
+const http = require('http');
+http.createServer((req, res) => res.end('Bot alive')).listen(process.env.PORT || 3000);require('dotenv').config();
 const { Client, GatewayIntentBits, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ModalBuilder, TextInputBuilder, TextInputStyle, Events } = require('discord.js');
 
 const TOKEN = process.env.TOKEN;
